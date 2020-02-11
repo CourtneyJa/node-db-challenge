@@ -23,11 +23,14 @@ function getProjects(id) {
 }
 
 //find all project resources
-function getResources(project_id) {
-  return db("project")
-    .select("r.id", "r.name", "r.description")
-    .join("resource as r", "project.id", "r.project_id")
-    .where("r.project_id", project_id);
+// function getResources(project_id) {
+//   return db("project")
+//     .select("r.id", "r.name", "r.description")
+//     .join("resource as r", "project.id", "r.project_id")
+//     .where("r.project_id", project_id);
+// }
+function getResources(){
+  return db(resource)
 }
 
 //find all project tasks

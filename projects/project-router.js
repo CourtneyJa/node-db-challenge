@@ -32,7 +32,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.get("/:id/resources", (req, res) => {
+router.get("/:id/resource", (req, res) => {
   const { id } = req.params;
 
   Projects.getResources(id)
